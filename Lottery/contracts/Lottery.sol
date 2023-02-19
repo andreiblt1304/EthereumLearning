@@ -23,7 +23,7 @@ contract Lottery {
         address payable winner = payable(participants[winnerIndex]);
         winner.transfer(address(this).balance);
 
-        participants = new address[](0);                            //resetting the participants array
+        participants = new address[](0);
     }
 
     function getEntries() public view returns (address[] memory) {
